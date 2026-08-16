@@ -31,7 +31,7 @@ export function App() {
   };
 
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-[#FDFBF7] text-[#222222]">
         {/* Navigation Header */}
