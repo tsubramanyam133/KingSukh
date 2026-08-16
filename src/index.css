@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  --color-forest: #1E3A2B;
+  --color-forest-dark: #0F291E;
+  --color-forest-light: #2A523D;
+  --color-cream: #FDFBF7;
+  --color-sand: #F4EFE6;
+  --color-terracotta: #C86D51;
+  --color-gold: #C5A059;
+  --color-gold-light: #E5C478;
+  --color-charcoal: #222222;
+  --color-charcoal-light: #444444;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    background-color: #FDFBF7;
+    color: #222222;
+  }
+
+  h1, h2, h3, h4, .font-serif-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Glassmorphism helpers */
+.glass-nav {
+  background: rgba(253, 251, 247, 0.90);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-dark {
+  background: rgba(15, 41, 30, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Accessibility focus ring */
+*:focus-visible {
+  outline: 2px solid #C5A059;
+  outline-offset: 2px;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
