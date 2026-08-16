@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../components/Button";
 import { Calendar, MessageSquare, MapPin, ShieldCheck, Clock } from "lucide-react";
+import { getImageUrl } from "../utils/image";
 
 interface HeroProps {
   onOpenBookingModal: () => void;
@@ -18,7 +19,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
       {/* Background Image with subtle zoom animation */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero/hero-main.jpg"
+          src={getImageUrl("/images/hero/hero-main.jpg")}
           alt="King Sukh Guest House Main Property View"
           className="w-full h-full object-cover scale-105 animate-pulse transition-transform duration-10000 ease-out"
           style={{ animationDuration: "12s" }}

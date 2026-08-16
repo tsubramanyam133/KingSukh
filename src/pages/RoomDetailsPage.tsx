@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { roomsData } from "../data/rooms";
 import { Button } from "../components/Button";
 import { CheckCircle2, ArrowLeft, Calendar, MessageSquare, ShieldCheck, Clock, UtensilsCrossed } from "lucide-react";
+import { getImageUrl } from "../utils/image";
 
 interface RoomDetailsPageProps {
   onBookRoom: (roomName: string) => void;
@@ -49,7 +50,7 @@ export const RoomDetailsPage: React.FC<RoomDetailsPageProps> = ({ onBookRoom }) 
           <div className="lg:col-span-7 space-y-4">
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-[#1E3A2B]/10 bg-gray-100">
               <img
-                src={activeImage}
+                src={getImageUrl(activeImage)}
                 alt={room.name}
                 className="w-full h-full object-cover transition-all duration-500"
               />
@@ -73,7 +74,7 @@ export const RoomDetailsPage: React.FC<RoomDetailsPageProps> = ({ onBookRoom }) 
                       : "border-transparent opacity-70 hover:opacity-100"
                   }`}
                 >
-                  <img src={img} alt={`${room.name} photo ${idx + 1}`} className="w-full h-full object-cover" />
+                  <img src={getImageUrl(img)} alt={`${room.name} photo ${idx + 1}`} className="w-full h-full object-cover" />
                 </button>
               ))}
             </div>

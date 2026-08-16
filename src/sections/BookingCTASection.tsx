@@ -1,6 +1,6 @@
-import React from "react";
 import { Button } from "../components/Button";
 import { Calendar, MessageSquare, Phone } from "lucide-react";
+import { getImageUrl } from "../utils/image";
 
 interface BookingCTASectionProps {
   onOpenBookingModal: () => void;
@@ -22,7 +22,7 @@ export const BookingCTASection: React.FC<BookingCTASectionProps> = ({
       {/* Background Image overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero/hero-main.jpg"
+          src={getImageUrl("/images/hero/hero-main.jpg")}
           alt="King Sukh Guest House Exterior Atmosphere"
           className="w-full h-full object-cover scale-105 opacity-70"
           loading="lazy"

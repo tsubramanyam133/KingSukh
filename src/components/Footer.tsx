@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
+import { getImageUrl } from "../utils/image";
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -33,7 +34,7 @@ export const Footer: React.FC = () => {
                 aria-label="King Sukh Guest House Facebook"
                 className="hover:scale-110 transition-transform"
               >
-                <img src="/images/icons/facebook.png" alt="Facebook" className="w-7 h-7 opacity-80 hover:opacity-100 transition-opacity" />
+                <img src={getImageUrl("/images/icons/facebook.png")} alt="Facebook" className="w-7 h-7 opacity-80 hover:opacity-100 transition-opacity" />
               </a>
               <a
                 href="https://www.instagram.com/kingsukhguesthouse/"
@@ -42,7 +43,7 @@ export const Footer: React.FC = () => {
                 aria-label="King Sukh Guest House Instagram"
                 className="hover:scale-110 transition-transform"
               >
-                <img src="/images/icons/instagram.png" alt="Instagram" className="w-7 h-7 opacity-80 hover:opacity-100 transition-opacity" />
+                <img src={getImageUrl("/images/icons/instagram.png")} alt="Instagram" className="w-7 h-7 opacity-80 hover:opacity-100 transition-opacity" />
               </a>
               <a
                 href="https://www.twitter.com"
@@ -51,7 +52,7 @@ export const Footer: React.FC = () => {
                 aria-label="King Sukh Guest House Twitter"
                 className="hover:scale-110 transition-transform"
               >
-                <img src="/images/icons/twitter.png" alt="Twitter" className="w-7 h-7 opacity-80 hover:opacity-100 transition-opacity" />
+                <img src={getImageUrl("/images/icons/twitter.png")} alt="Twitter" className="w-7 h-7 opacity-80 hover:opacity-100 transition-opacity" />
               </a>
               <a
                 href="https://www.youtube.com"
@@ -60,7 +61,7 @@ export const Footer: React.FC = () => {
                 aria-label="King Sukh Guest House YouTube"
                 className="hover:scale-110 transition-transform"
               >
-                <img src="/images/icons/youtube.png" alt="YouTube" className="w-7 h-7 opacity-80 hover:opacity-100 transition-opacity" />
+                <img src={getImageUrl("/images/icons/youtube.png")} alt="YouTube" className="w-7 h-7 opacity-80 hover:opacity-100 transition-opacity" />
               </a>
             </div>
           </div>

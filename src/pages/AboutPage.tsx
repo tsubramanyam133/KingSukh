@@ -2,6 +2,7 @@ import React from "react";
 import { SectionHeading } from "../components/SectionHeading";
 import { Button } from "../components/Button";
 import { Phone, Calendar, Trees, ShieldCheck, HeartHandshake } from "lucide-react";
+import { getImageUrl } from "../utils/image";
 
 interface AboutPageProps {
   onOpenBookingModal: () => void;
@@ -55,10 +56,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBookingModal }) => {
 
           <div className="lg:col-span-6 grid grid-cols-2 gap-4">
             <div className="rounded-2xl overflow-hidden shadow-md aspect-[3/4]">
-              <img src="/images/property/exterior.jpg" alt="King Sukh Exterior View" className="w-full h-full object-cover" />
+              <img src={getImageUrl("/images/property/exterior.jpg")} alt="King Sukh Exterior View" className="w-full h-full object-cover" />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-md aspect-[3/4] sm:translate-y-6">
-              <img src="/images/property/reception.jpg" alt="King Sukh Reception Lounge" className="w-full h-full object-cover" />
+              <img src={getImageUrl("/images/property/reception.jpg")} alt="King Sukh Reception Lounge" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

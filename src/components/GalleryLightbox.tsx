@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import type { GalleryItem } from "../data/gallery";
+import { getImageUrl } from "../utils/image";
 
 interface GalleryLightboxProps {
   items: GalleryItem[];
@@ -61,7 +62,7 @@ export const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
       {/* Main Image Container */}
       <div className="relative max-w-5xl max-h-[80vh] w-full flex items-center justify-center">
         <img
-          src={currentItem.image}
+          src={getImageUrl(currentItem.image)}
           alt={currentItem.alt}
           className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl transition-all duration-300"
         />

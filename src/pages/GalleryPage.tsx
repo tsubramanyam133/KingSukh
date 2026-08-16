@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { galleryData } from "../data/gallery";
 import { GalleryLightbox } from "../components/GalleryLightbox";
 import { Maximize2 } from "lucide-react";
+import { getImageUrl } from "../utils/image";
 
 export const GalleryPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<"all" | "rooms" | "property" | "surroundings">("all");
@@ -83,7 +84,7 @@ export const GalleryPage: React.FC = () => {
               onClick={() => openLightbox(idx)}
             >
               <img
-                src={item.image}
+                src={getImageUrl(item.image)}
                 alt={item.alt}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"

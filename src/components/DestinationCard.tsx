@@ -1,6 +1,7 @@
 import React from "react";
 import type { Destination } from "../data/destinations";
 import { MapPin, Compass } from "lucide-react";
+import { getImageUrl } from "../utils/image";
 
 interface DestinationCardProps {
   destination: Destination;
@@ -11,7 +12,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({ destination })
     <div className="group bg-[#FDFBF7] rounded-2xl overflow-hidden border border-[#1E3A2B]/10 shadow-sm hover:shadow-lg active:scale-[0.98] transition-all duration-300 flex flex-col h-full touch-manipulation">
       <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
         <img
-          src={destination.image}
+          src={getImageUrl(destination.image)}
           alt={destination.name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"

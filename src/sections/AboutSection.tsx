@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { SectionHeading } from "../components/SectionHeading";
 import { Button } from "../components/Button";
 import { ArrowRight, Trees, HeartHandshake, ShieldCheck } from "lucide-react";
+import { getImageUrl } from "../utils/image";
 
 export const AboutSection: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3]">
               <img
-                src="/images/property/exterior.jpg"
+                src={getImageUrl("/images/property/exterior.jpg")}
                 alt="King Sukh Guest House Main Building and Garden"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 loading="lazy"
@@ -24,7 +25,7 @@ export const AboutSection: React.FC = () => {
             {/* Inset Secondary Image / Badge */}
             <div className="absolute -bottom-6 -right-4 sm:-right-6 w-48 md:w-56 rounded-2xl overflow-hidden shadow-xl border-4 border-[#FDFBF7] aspect-[4/3] hidden sm:block">
               <img
-                src="/images/property/reception.jpg"
+                src={getImageUrl("/images/property/reception.jpg")}
                 alt="King Sukh Guest House Hospitality Lounge"
                 className="w-full h-full object-cover"
                 loading="lazy"
